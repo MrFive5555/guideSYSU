@@ -1,12 +1,12 @@
-#infoBar div.other p {
-  text-indent: 2em;
-}
+
 
 #Bar {
   transition: all 0.5s;
   margin: 0;
-  height: 1200px;
+  height: 1040px;
+  width: 200px;
   overflow: hidden;
+  display: inline-block;
 }
 #Bar.hide {
   height: 0;
@@ -44,6 +44,11 @@
   float: left;
 }
 
+/* 校园介绍里的元素 */
+#infoBar div.other p {
+  text-indent: 2em;
+}
+
 #infoBar div.other {
   height: 900px;
   overflow: hidden;
@@ -54,6 +59,7 @@
   overflow: hidden;
 }
 
+/* 参观引导里面的元素 */
 #guideBar div.other{
   height: 900px;
   width: 200px;
@@ -87,7 +93,53 @@
   border: 3px solid rgb(8, 124, 218);
 }
 
+/* 显示路径的p */
+#guideBar div#guideInfo p#pathInfo p {
+  margin: 0;
+}
+#guideBar div#guideInfo p#pathInfo p:hover {
+  margin: 0;
+  background-color: rgb(0, 255, 242);
+  color: rgb(58, 6, 247);
+  font-weight: bold;
+}
+
+#guideBar div#guideInfo p#lengthInfo {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#guideBar div#guideInfo button {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
 #guideBar div#guideInfo.hide {
   overflow: hidden;
   height: 0;
+}
+
+/* 表单样式 */
+form button {
+  display: block;
+  width: 150px;
+  margin: 20px auto 0 auto;
+}
+
+form select {
+  height: 30px;
+}
+
+form select[name=from],select[name=to] {
+  width: 120px;
+}
+
+form#guideType {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid rgb(0, 89, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }

@@ -43,11 +43,21 @@ $(document).ready(()=>{
     var path = pathObj.path;
     var pathStr = '';
     for(let i in path) {
-      pathStr += points[path[i]].name + '<br/>';
+      pathStr += '<p>' + points[path[i]].name + '</p>';
     }
     $('div#guideInfo p#pathInfo').html(pathStr);
     $('div#guideInfo p#lengthInfo').html('总长度:' + (length/1000).toFixed(1) + 'km<br/>');    
     $('div#guideInfo').removeClass('hide');
+
+    //可视化引导函数注册
+    $('p#pathInfo p').mouseenter(function() {
+      var id = $(this).html();
+      $('li.place#' + id).addClass('twinkle');
+    });
+    $('p#pathInfo p').mouseleave(function() {
+      var id = $(this).html();
+      $('li.place#' + id).removeClass('twinkle');
+    });
   };
 
   //获得路径
